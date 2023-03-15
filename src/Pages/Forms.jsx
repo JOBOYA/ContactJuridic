@@ -9,7 +9,7 @@ const HomePage = () => {
   const [showArrow, setShowArrow] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
-
+  
 
 
 
@@ -42,6 +42,7 @@ const HomePage = () => {
 
   const handleClick = () => {
     setShowForm(!showForm);
+    
   };
 
 
@@ -77,10 +78,12 @@ const HomePage = () => {
               Choisir sa forme juridique <br />
               en 2 minutes!
             </h1>
-          </div>
+            </div>
+            
           <div
-      className="main-container"
-      style={{ minHeight: "70vh", overflowY: "auto" }}>
+              className="main-container"
+             
+      >
 
 
             <Typewriter
@@ -99,12 +102,15 @@ const HomePage = () => {
             </Typewriter>
            
           <br />
-          <div className="button-container">
+          <div className="button-container"  style={{ height: "50vh", overflowY: "auto" }}>
   <button className="button" onClick={handleClick}>
     Commencer la Simulation
   </button>
               </div>
-              </div>
+            </div>
+            
+   
+        
 
           {showForm && (
             <div className="box">
