@@ -4,8 +4,8 @@
 
 html {
   background-color: #eeeeeef1;
-
- 
+  
+  overflow-y: auto;
  
 }
 
@@ -15,7 +15,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; /* Ajoutez cette ligne */
+  overflow: hidden;
+ 
+  overflow-y: auto;
  
 }
 
@@ -60,6 +62,11 @@ h2{
   background-color: white;
 }
 
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
 
 
 /************Header************************/
@@ -69,7 +76,10 @@ h2{
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   height: 100%;
+ 
+ 
 }
+
 
 .header {
   width: 100vw;
@@ -83,6 +93,7 @@ h2{
   font-weight: 600;
   background-color: rgba(75, 0, 130, 0.05);
   justify-content: space-between;
+ 
 }
 
 
@@ -130,8 +141,14 @@ h2{
 .typewriter-container {
   max-width: 80%; /* Limitez la largeur à 80% de la largeur de l'écran */
   margin: 0 auto; /* Centrez le texte */
-  text-align: justify; /* Justifiez le texte */
+  text-align: justify
 }
+
+
+
+
+
+
 
 .animated {
   animation: fadeInUp 0.8s;
@@ -237,37 +254,40 @@ input:focus {
 }
 
 /************Button 1************************/
+button {
 
-button, button:focus {
-  font-size: 17px;
-  padding: 10px 25px;
-  border-radius: 0.7rem;
-  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
-  border: 2px solid rgb(50, 50, 50);
-  border-bottom: 5px solid rgb(50, 50, 50);
-  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
-  transform: translate(0, -3px);
-  transition: 0.2s;
-  transition-timing-function: linear;
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
 }
 
 button:active {
-  transform: translate(0, 0);
-  border-bottom: 2px solid rgb(50, 50, 50);
-}
-
-.custom-button {
- 
-  width: auto;
-  display: inline-block;
-  /* Vous pouvez également définir une largeur maximale si nécessaire */
-  max-width: 200px;
+  transform: scale(0.9);
 }
 
 .button-container {
-  display: flex;
+  display: flex ;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-top: -10px;
 }
 
 
@@ -284,6 +304,18 @@ button:active {
     max-width: 90%;
   }
 }
+@media screen and (max-width: 768px) {
+  .typewriter-container {
+    line-height: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter-container {
+    margin-bottom: 20px; /* Ajoutez une marge en bas pour éviter que le texte ne recouvre le bouton de simulation */
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .typewriter-container {
@@ -302,6 +334,13 @@ button:active {
     width: 80%;
   }
 }
+
+@media (max-width: 768px) {
+  .typewriter-container {
+    margin-bottom: 20px; /* Ajoutez une marge en bas pour éviter que le texte ne recouvre le bouton de simulation */
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   .header-text {
@@ -325,3 +364,21 @@ button:active {
     width: 100%;
   }
 }
+
+/***button responsive**/  
+/* Bouton pour les écrans larges */
+@media screen and (min-width: 768px) {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button-container {
+    max-width: 100%;
+  }
+}
+
+

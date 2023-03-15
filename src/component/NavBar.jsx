@@ -21,11 +21,12 @@ function NavBar() {
 
 
   return (
-    <nav className={`fixed w-full z-10 ${isScrolled ? 'bg-white' : 'bg-transparent'} `}>
+    <nav className={`fixed w-full z-10 ${isScrolled ? 'bg-white' : 'bg-transparent'}  `}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-xl font-bold">Logo</div>
+          <span >Des questions?</span>
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-4">
           

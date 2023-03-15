@@ -5,9 +5,10 @@ import { BsCalendar3 } from 'react-icons/bs';
 
 function MobileNavBar() {
   return (
-    <div className="fixed bottom-0 left-0 w-full p-4 md:hidden bg-white rounded-t-lg shadow-lg flex justify-around items-center">
+    <div className="fixed bottom-0 left-0 w-full p-4 md:hidden bg-white rounded-t-3xl shadow-lg flex justify-around">
       <a href="Accueil" className="focus:outline-none flex flex-col items-center">
-        <AiOutlineHome className="text-2xl" />
+        <AiOutlineHome className="text-2xl"
+        />
         <span className="text-sm">Accueil</span>
       </a>
       <a href="Contact" className="focus:outline-none flex flex-col items-center">
