@@ -61,6 +61,7 @@ h2{
 }
 
 
+
 /************Header************************/
 
 .container {
@@ -72,6 +73,7 @@ h2{
 
 .header {
   width: 100vw;
+  max-width: 100%;
   margin: 90px 0;
   display: flex;
   align-items: center;
@@ -161,7 +163,7 @@ h2{
 
 .loader {
   border: 6px solid #f3f3f3;
-  border-top: 6px solid #3498db;
+  border-top: 6px solid rgba(75, 0, 130, 0.3);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -176,6 +178,8 @@ h2{
     transform: rotate(360deg);
   }
 }
+
+
 
 
 
@@ -198,6 +202,7 @@ h2{
   display: block;
   margin-bottom: 5px;
 }
+
 
 /*********Forms***/
 
@@ -231,6 +236,42 @@ input:focus {
     monospace;
 }
 
+/************Button 1************************/
+
+button, button:focus {
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+  transform: translate(0, -3px);
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+button:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.custom-button {
+ 
+  width: auto;
+  display: inline-block;
+  /* Vous pouvez également définir une largeur maximale si nécessaire */
+  max-width: 200px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 /*******Media queries********/
 @media screen and (max-width: 1200px) {
   .input-container {
@@ -248,6 +289,10 @@ input:focus {
   .typewriter-container {
     max-width: 95%;
   }
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
 
   .header-text {
     font-size: 1.5rem;
@@ -261,6 +306,9 @@ input:focus {
 @media screen and (max-width: 600px) {
   .header-text {
     font-size: 1.2rem;
+  }
+  .header {
+    padding: 5px;
   }
 
   .input-container {
