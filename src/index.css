@@ -259,6 +259,12 @@ input:focus {
     monospace;
 }
 
+/* Custom Styles */
+.backdrop-filter {
+  backdrop-filter: blur(5px);
+}
+
+
 /************Button 1************************/
 button {
 

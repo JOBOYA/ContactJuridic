@@ -18,11 +18,16 @@ function NavBar() {
     };
   }, []);
 
-
-
   return (
-    <nav className={`fixed w-full z-10 ${isScrolled ? 'bg-white' : 'bg-transparent'}  `}>
-      <div className="container mx-auto px-4">
+    <nav
+    className={`fixed w-full z-10 transition-all duration-300 py-4 backdrop-filter ${
+      isScrolled
+        ? 'bg-opacity-1'
+        : 'bg-transparent backdrop-filter backdrop-blur-sm bg-opacity-50'
+    }`}
+  >
+  
+<div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-xl font-bold">Logo</div>
