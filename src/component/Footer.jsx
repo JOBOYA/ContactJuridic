@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center mt-10">
+    <footer className="flex flex-col justify-center items-center mt-10" style={{ paddingBottom: "100px" }}>
       <hr className="border-gray-400 w-2/3 mb-4" />
       <p className="text-sm font-bold mb-2">Suivez-nous</p>
       <div className="flex justify-center items-center">
