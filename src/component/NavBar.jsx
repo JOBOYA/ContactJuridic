@@ -31,7 +31,9 @@ function NavBar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-xl font-bold">Logo</div>
-          <span >Des questions?</span>
+         
+            <span >Des questions?</span>
+         
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-4">
           
