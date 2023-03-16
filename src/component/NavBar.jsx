@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MobileNavBar from './MobileNavBar';
+
 
 
 function NavBar() {
@@ -59,7 +59,7 @@ function NavBar() {
         </div>
       </div>
 
-            <MobileNavBar />
+          
     </nav>
   );
 }
