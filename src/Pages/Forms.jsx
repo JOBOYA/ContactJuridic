@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
 import Typewriter from 'react-typewriter'; // Importez Typewriter
-
+import AnnualRevenueSlider from '../component/annualRevenueSlider';
 
 
 import { BsArrowUpSquare } from 'react-icons/bs';
@@ -155,7 +155,7 @@ const HomePage = () => {
                 <br />
                 <br />
                 <p>Votre Chiffre d'affaires annuel</p>
-                <input type="number" placeholder="Chiffre d'affaires annuel" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                <AnnualRevenueSlider />
                 <br />
                 <br />
                 <label htmlFor="name" className="input-label">Avez-vous une location professionnelle? Si oui, pour quel montant annuel?</label>
@@ -170,7 +170,7 @@ const HomePage = () => {
                 {showInputs && (
                   <>
                     <label htmlFor="name" className="input-label">Indiquez le nombre de salarié</label>
-                      <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required onChange={handleNumEmployeesChange} />
+                      <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required onChange={handleNumEmployeesChange} value={presence1} />
                     <br />
                     <br />
                     {Array.from({ length: numEmployees }, (_, i) => (

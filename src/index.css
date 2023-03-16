@@ -394,6 +394,16 @@ button:active {
 }
 
 
+.rc-slider-mark-text {
+  writing-mode: horizontal-tb;
+}
+
+@media (max-width: 768px) {
+  .rc-slider {
+    width: 80%;
+  }
+}
+
 /*******Modal************/
 
 .modal {
