@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from './component/NavBar';
 import MobileNavBar from './component/MobileNavBar';
 import HomePage from './Pages/Forms';
+import Cookies from './component/cookies';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MobileNavBar />
       <div className="container">
         <HomePage />
+        <Cookies />
        
       </div>
     </div>
