@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
 import Typewriter from 'react-typewriter'; // Importez Typewriter
 import AnnualRevenueSlider from '../component/annualRevenueSlider';
-
-
 import { BsArrowUpSquare } from 'react-icons/bs';
 import Logo from '../assets/img1.png';
+import Card from '../component/cards';
 
 
 const HomePage = () => {
@@ -97,31 +96,32 @@ const HomePage = () => {
             </h1>
 
           </div>
+          
           <div className="main-container  p-6 bg-white shadow-xl rounded-lg max-w-sm mx-auto text-center mt-10 mb-10 absolute inset-x-0 top-60
              hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110
             ">
+    <Typewriter
+      typing={1}
+      speed={500}
+      onTypingDone={() => console.log('Typing done!')}
+    >
+      <h2>
+        Vous souhaitez créer votre entreprise mais vous ne savez pas quelle
+        forme juridique choisir? Grace à ce simulateur, vous saurez quelle
+        forme juridique est la plus adaptée à votre activité, à votre
+        situation personnelle et à vos besoins ! Petit bonus, possibilité
+        d'avoir le budget prévisionnel de la forme juridique la mieux adapté
+        pour les banques!
+      </h2>
+    </Typewriter>
+  </div>
 
 
-            <Typewriter
-              typing={1}
-              speed={500}
-              onTypingDone={() => console.log('Typing done!')}
-            >
-              <h2>
-                Vous souhaitez créer votre entreprise mais vous ne savez pas quelle
-                forme juridique choisir? Grace à ce simulateur, vous saurez quelle
-                forme juridique est la plus adaptée à votre activité, à votre
-                situation personnelle et à vos besoins ! Petit bonus, possibilité
-                d'avoir le budget prévisionnel de la forme juridique la mieux adapté
-                pour les banques!
-              </h2>
-            </Typewriter>
 
-          </div>
-
-
-          <br />
-
+            <br />
+            
+            <Card />
+            
           <div className="button-container" style={{ height: "50vh", overflowY: "auto" }}>
             <button className="button" onClick={handleClick}>
               Commencer la Simulation
@@ -162,7 +162,7 @@ const HomePage = () => {
                 <br />
                 <label htmlFor="name" className="input-label">Présence de salarié</label>
                 <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={handlePresenceChange} value={presence}>
-                <option value="">Selectionner</option>
+                  <option value="">Selectionner</option>
                   <option value="oui">OUI</option>
                   <option value="non">NON</option>
                 </select>
@@ -209,26 +209,26 @@ const HomePage = () => {
                   <option value="non">NON</option>
                 </select>
                 {investissement === 'oui' && (
-  <>
-    <input type="text" placeholder="Investissement: véhicule" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-    <br />
-    <br />
-    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule de tourisme (VP)</label>
-    <input type="text" placeholder="Indiquez le nombre de Véhicule de tourisme (VP)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-    <br />
-    <br />
-    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule utilitaire (VU)</label>
-    <input type="text" placeholder="Indiquez le nombre de Véhicule utilitaire (VU)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-    <br />
-    <br />
-    <label htmlFor="name" className="input-label">Indiquez le prix du VP 1</label>
-    <input type="text" placeholder="Indiquez le prix du VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-    <br />
-    <br />
-    <label htmlFor="name" className="input-label">Indiquez le taux d'émission de CO2 VP 1</label>
-    <input type="text" placeholder="Indiquez le taux d'émission de CO2 VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-  </>
-)}
+                  <>
+
+                    <br />
+                    <br />
+                    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule de tourisme (VP)</label>
+                    <input type="text" placeholder="Indiquez le nombre de Véhicule de tourisme (VP)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                    <br />
+                    <br />
+                    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule utilitaire (VU)</label>
+                    <input type="text" placeholder="Indiquez le nombre de Véhicule utilitaire (VU)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                    <br />
+                    <br />
+                    <label htmlFor="name" className="input-label">Indiquez le prix du VP 1</label>
+                    <input type="text" placeholder="Indiquez le prix du VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                    <br />
+                    <br />
+                    <label htmlFor="name" className="input-label">Indiquez le taux d'émission de CO2 VP 1</label>
+                    <input type="text" placeholder="Indiquez le taux d'émission de CO2 VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                  </>
+                )}
                 <br />
                 <br />
 
