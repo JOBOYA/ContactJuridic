@@ -71,7 +71,7 @@ const HomePage = () => {
     top: "50%",
   }}
 >
-  <BsArrowUpSquare style={{ fontSize: "2rem", color: "#333" }} />
+              <BsArrowUpSquare style={{ fontSize: "3rem", color: "#000", padding: "10px", borderRadius: "50%", backgroundColor: "#fff", boxShadow: "0 0 10px #000" }} />
 </div>
 
           <div className="header">
@@ -82,7 +82,10 @@ const HomePage = () => {
               </h1>
           
             </div>
-            <div className="main-container  p-6 bg-white shadow-md rounded-lg max-w-sm mx-auto text-center mt-10 mb-10 absolute inset-x-0 top-60  ">
+            <div className="main-container  p-6 bg-white shadow-xl rounded-lg max-w-sm mx-auto text-center mt-10 mb-10 absolute inset-x-0 top-60
+             hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110
+            ">
+
             
             <Typewriter
               typing={1}
