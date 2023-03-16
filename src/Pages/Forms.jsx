@@ -162,7 +162,7 @@ const HomePage = () => {
                 <br />
                 <label htmlFor="name" className="input-label">Présence de salarié</label>
                 <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={handlePresenceChange} value={presence}>
-
+                <option value="">Selectionner</option>
                   <option value="oui">OUI</option>
                   <option value="non">NON</option>
                 </select>
@@ -204,7 +204,7 @@ const HomePage = () => {
                 <br />
                 <label htmlFor="name" className="input-label">Investissement: véhicule</label>
                 <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={(e) => setInvestissement(e.target.value)} value={investissement}>
-
+                  <option value="">Selectionner</option>
                   <option value="oui">OUI</option>
                   <option value="non">NON</option>
                 </select>
