@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
 import Typewriter from 'react-typewriter'; // Importez Typewriter
 
+
+
 import { BsArrowUpSquare } from 'react-icons/bs';
 import Logo from '../assets/img1.png';
 
@@ -77,18 +79,14 @@ const HomePage = () => {
             <h1 className="header-text title">
               Choisir sa forme juridique <br />
               en 2 minutes!
-            </h1>
+              </h1>
+          
             </div>
+            <div className="main-container  p-6 bg-white shadow-md rounded-lg max-w-sm mx-auto text-center mt-10 mb-10 absolute inset-x-0 top-60  ">
             
-          <div
-              className="main-container"
-             
-      >
-
-
             <Typewriter
               typing={1}
-              speed={500} // Augmentez ou diminuez cette valeur pour régler la vitesse de frappe
+              speed={500}
               onTypingDone={() => console.log('Typing done!')}
             >
               <h2>
@@ -100,16 +98,19 @@ const HomePage = () => {
                 pour les banques!
               </h2>
             </Typewriter>
-           
-          <br />
+          
+            </div>
+                     
+        
+              <br />
+              
           <div className="button-container"  style={{ height: "50vh", overflowY: "auto" }}>
   <button className="button" onClick={handleClick}>
     Commencer la Simulation
   </button>
               </div>
-            </div>
-            
-   
+           
+          
         
 
           {showForm && (

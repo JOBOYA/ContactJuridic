@@ -16,8 +16,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
- 
   overflow-y: auto;
+  background-image: url('assets/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
  
 }
 
@@ -292,9 +295,6 @@ button:active {
   flex-direction: column;
   margin-top: -10px;
 }
-
-
-
 /*******Media queries********/
 @media screen and (max-width: 1200px) {
   .input-container {
@@ -371,7 +371,7 @@ button:active {
 /***button responsive**/  
 /* Bouton pour les écrans larges */
 @media screen and (min-width: 768px) {
-  .button-container {
+  .btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,9 +379,18 @@ button:active {
 }
 
 @media only screen and (max-width: 600px) {
-  .button-container {
+  .btn {
     max-width: 100%;
   }
 }
 
 
+/*******Modal************/
+
+@media (max-width: 768px) {
+  .main-container {
+    top : 50%;
+    margin: 15px;
+    font-size: 15px
+  }
+}
