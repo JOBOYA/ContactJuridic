@@ -14,7 +14,7 @@ const HomePage = () => {
   const [presence, setPresence] = useState('');
   const[presence1, setPresence1] = useState('');
   const [showInputs, setShowInputs] = useState(false);
-
+  const [numEmployees, setNumEmployees] = useState(0);
 
 
   useLayoutEffect(() => {
@@ -58,6 +58,10 @@ const HomePage = () => {
     } else {
       setShowInputs(false);
     }
+  };
+
+  const handleNumEmployeesChange = (e) => {
+    setNumEmployees(e.target.value);
   };
 
 
@@ -166,11 +170,25 @@ const HomePage = () => {
                 {showInputs && (
                   <>
                     <label htmlFor="name" className="input-label">Indiquez le nombre de salarié</label>
-                    <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required/>
+                      <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required onChange={handleNumEmployeesChange} />
                     <br />
                     <br />
-                    <label htmlFor="name" className="input-label">Salaire brut mensuel Salarié 1</label>
-                    <input type="number" placeholder="Salaire brut mensuel Salarié 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                    {Array.from({ length: numEmployees }, (_, i) => (
+  <div key={`employee${i+1}`}>
+    <label htmlFor={`employee${i+1}`} className="input-label">
+      Salaire brut mensuel Salarié {i+1}
+    </label>
+    <input
+      type="number"
+      id={`employee${i+1}`}
+      name={`employee${i+1}`}
+      placeholder={`Salaire brut mensuel Salarié ${i+1}`}
+      style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }}
+                          required
+                          
+    />
+  </div>
+))}
                     <br />
                     <br />
                   </>
@@ -185,6 +203,7 @@ const HomePage = () => {
                 <br />
                   <label htmlFor="name" className="input-label">Investissement: véhicule</label>
                   <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={handlePresenceChange} value={presence1}>
+                    
                     <option value="oui">OUI</option>
                     <option value="non">NON</option>
                   </select>
