@@ -12,10 +12,10 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [presence, setPresence] = useState('');
-  const[presence1, setPresence1] = useState('');
+  const [presence1, setPresence1] = useState('');
+  const [investissement, setInvestissement] = useState('');
   const [showInputs, setShowInputs] = useState(false);
   const [numEmployees, setNumEmployees] = useState(0);
-
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -46,7 +46,6 @@ const HomePage = () => {
 
   const handleClick = () => {
     setShowForm(!showForm);
-
   };
 
   const handlePresenceChange = (e) => {
@@ -63,7 +62,6 @@ const HomePage = () => {
   const handleNumEmployeesChange = (e) => {
     setNumEmployees(e.target.value);
   };
-
 
   return (
 
@@ -162,33 +160,36 @@ const HomePage = () => {
                 <input type="text" placeholder="Avez-vous une location professionnelle? Si oui, pour quel montant annuel?" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} />
                 <br />
                 <br />
-                <label htmlFor="name" className="input-label">Présence de salarié oui ou non</label>
-                <input type="text" placeholder="Présence de salarié oui ou non" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} value={presence}
-                  onChange={handlePresenceChange} required />
+                <label htmlFor="name" className="input-label">Présence de salarié</label>
+                <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={handlePresenceChange} value={presence}>
+
+                  <option value="oui">OUI</option>
+                  <option value="non">NON</option>
+                </select>
                 <br />
                 <br />
                 {showInputs && (
                   <>
                     <label htmlFor="name" className="input-label">Indiquez le nombre de salarié</label>
-                      <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required onChange={handleNumEmployeesChange} value={presence1} />
+                    <input type="number" placeholder="Indiquez le nombre de salarié" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required onChange={handleNumEmployeesChange} value={presence1} />
                     <br />
                     <br />
                     {Array.from({ length: numEmployees }, (_, i) => (
-  <div key={`employee${i+1}`}>
-    <label htmlFor={`employee${i+1}`} className="input-label">
-      Salaire brut mensuel Salarié {i+1}
-    </label>
-    <input
-      type="number"
-      id={`employee${i+1}`}
-      name={`employee${i+1}`}
-      placeholder={`Salaire brut mensuel Salarié ${i+1}`}
-      style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }}
+                      <div key={`employee${i + 1}`}>
+                        <label htmlFor={`employee${i + 1}`} className="input-label">
+                          Salaire brut mensuel Salarié {i + 1}
+                        </label>
+                        <input
+                          type="number"
+                          id={`employee${i + 1}`}
+                          name={`employee${i + 1}`}
+                          placeholder={`Salaire brut mensuel Salarié ${i + 1}`}
+                          style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }}
                           required
-                          
-    />
-  </div>
-))}
+
+                        />
+                      </div>
+                    ))}
                     <br />
                     <br />
                   </>
@@ -201,37 +202,38 @@ const HomePage = () => {
                 <input type="number" placeholder="Investissement : matériels Indiquez le montant" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
                 <br />
                 <br />
-                  <label htmlFor="name" className="input-label">Investissement: véhicule</label>
-                  <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={handlePresenceChange} value={presence1}>
-                    
-                    <option value="oui">OUI</option>
-                    <option value="non">NON</option>
-                  </select>
-                  {showInputs && (
-                  <>
-                <input type="text" placeholder="Investissement: véhicule" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+                <label htmlFor="name" className="input-label">Investissement: véhicule</label>
+                <select id="invertissement" name="investissement" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} onChange={(e) => setInvestissement(e.target.value)} value={investissement}>
+
+                  <option value="oui">OUI</option>
+                  <option value="non">NON</option>
+                </select>
+                {investissement === 'oui' && (
+  <>
+    <input type="text" placeholder="Investissement: véhicule" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+    <br />
+    <br />
+    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule de tourisme (VP)</label>
+    <input type="text" placeholder="Indiquez le nombre de Véhicule de tourisme (VP)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+    <br />
+    <br />
+    <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule utilitaire (VU)</label>
+    <input type="text" placeholder="Indiquez le nombre de Véhicule utilitaire (VU)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+    <br />
+    <br />
+    <label htmlFor="name" className="input-label">Indiquez le prix du VP 1</label>
+    <input type="text" placeholder="Indiquez le prix du VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+    <br />
+    <br />
+    <label htmlFor="name" className="input-label">Indiquez le taux d'émission de CO2 VP 1</label>
+    <input type="text" placeholder="Indiquez le taux d'émission de CO2 VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
+  </>
+)}
                 <br />
                 <br />
-                <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule de tourisme (VP)</label>
-                <input type="text" placeholder="Indiquez le nombre de Véhicule de tourisme (VP)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-                <br />
-                <br />
-                <label htmlFor="name" className="input-label">Indiquez le nombre de Véhicule utilitaire (VU)</label>
-                <input type="text" placeholder="Indiquez le nombre de Véhicule utilitaire (VU)" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-                <br />
-                <br />
-                <label htmlFor="name" className="input-label">Indiquez le prix du VP 1</label>
-                <input type="text" placeholder="Indiquez le prix du VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-                <br />
-                <br />
-                <label htmlFor="name" className="input-label">Indiquez le taux d'émission de CO2 VP 1</label>
-                      <input type="text" placeholder="Indiquez le taux d'émission de CO2 VP 1" style={{ backgroundColor: 'rgba(75, 0, 130, 0.1)', height: '40px' }} required />
-                      </> )}
-                <br />
-                      <br />
-                   
+
               </div>
-            
+
 
 
             </div>
