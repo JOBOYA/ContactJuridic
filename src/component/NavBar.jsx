@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.svg'; // chemin d'accès au fichier SVG
+
 
 
 
@@ -29,9 +31,12 @@ function NavBar() {
   
 <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="text-xl font-bold">Logo</div>
-         
+          {/* import svg */}
+          <img src={logo} alt="logo" width="150" height="100" />
+
+
+          
+            
             <span >Des questions?</span>
          
           {/* Desktop menu */}
