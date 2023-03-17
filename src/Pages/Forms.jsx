@@ -91,8 +91,9 @@ const HomePage = () => {
           <div className="header">
             <img src={Logo} alt="logo" id="img1" className="header-img" />
             <h1 className="header-text title">
-              Choisir sa forme juridique <br />
-              en 2 minutes!
+                Choisir la meilleur forme juridique<br />
+                la plus adaptée à votre projet !
+            
             </h1>
 
           </div>
@@ -110,8 +111,7 @@ const HomePage = () => {
         forme juridique choisir? Grace à ce simulateur, vous saurez quelle
         forme juridique est la plus adaptée à votre activité, à votre
         situation personnelle et à vos besoins ! Petit bonus, possibilité
-        d'avoir le budget prévisionnel de la forme juridique la mieux adapté
-        pour les banques!
+        d'avoir le budget prévisionnel de la forme juridique la mieux adaptée!
       </h2>
     </Typewriter>
   </div>

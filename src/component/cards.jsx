@@ -1,11 +1,77 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Card = () => {
+  const cardRef1 = useRef(null);
+  const cardRef2 = useRef(null);
+  const cardRef3 = useRef(null);
+  const cardRef4 = useRef(null);
+
+  useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(cardRef1.current, {
+          scrollTrigger: {
+              trigger: cardRef1.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: 1,
+              toggleActions: "play none none reverse",
+          },
+          x: 100,
+          opacity: 0,
+          duration: 1,
+      });
+      gsap.from(cardRef2.current, {
+          scrollTrigger: {
+              trigger: cardRef2.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: 1,
+              toggleActions: "play none none reverse",
+          },
+          x: -100,
+          opacity: 0,
+          duration: 1,
+      });
+      gsap.from(cardRef3.current, {
+          scrollTrigger: {
+              trigger: cardRef3.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: 1,
+              toggleActions: "play none none reverse",
+          },
+          x: 100,
+          opacity: 0,
+          duration: 1,
+      });
+      gsap.from(cardRef4.current, {
+          scrollTrigger: {
+              trigger: cardRef4.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: 1,
+              toggleActions: "play none none reverse",
+          },
+          x: -100,
+          opacity: 0,
+          duration: 1,
+      });
+  }, []);
+    
+    const cardStyle = {
+        transform: "translateY(0px)",
+        opacity: 1,
+    };
+    
+    
+    
     return (
-        <div className="cards">
+        <div className="cards" >
         <div className="p-10 card__grid place-items-center  place-content-center min-h-screen">
 
-            <div className="card--1 bg-white shadow-xl rounded-3xl max-w-xs pt-4 pb-8 px-4">
+            <div className="card--1 bg-white shadow-xl rounded-3xl max-w-xs pt-4 pb-8 px-4" ref={cardRef1} style={cardStyle}>
                 <div className="w-full h-64">
                     <img class="w-full h-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Antelope Canyon" />
                 </div>
@@ -16,7 +82,7 @@ const Card = () => {
                 </div>
 
             </div>
-            <div className="card--2 flex items-center bg-white shadow-xl rounded-3xl w-80 p-4">
+            <div className="card--2 flex items-center bg-white shadow-xl rounded-3xl w-80 p-4" ref={cardRef2} style={cardStyle}>
                 <div className="w-20 h-20">
                     <img src="https://media.istockphoto.com/id/1219954365/fr/photo/ing%C3%A9nieur-r%C3%A9ussi-retenant-le-plan-et-regardant-loin.jpg?s=612x612&w=0&k=20&c=GxqHMgEtqG8S1xykrTpX1b0dpCLviPlFJKMsTaXbs-s=" alt="Elise Doe" className="rounded-2xl object-cover w-full h-full" />
                 </div>
@@ -34,7 +100,7 @@ const Card = () => {
                 </div>
             </div>
 
-            <div className="card--3 bg-white shadow-xl rounded-3xl max-w-xs pt-4 pb-8 px-4">
+            <div className="card--3 bg-white shadow-xl rounded-3xl max-w-xs pt-4 pb-8 px-4" ref={cardRef3} style={cardStyle}>
                 <div className="w-full h-64">
                     <img class="w-full h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Galaxy Abstract Paint" />
                 </div>
@@ -45,7 +111,7 @@ const Card = () => {
                 </div>
 
             </div>
-            <div className="card--4 flex items-center bg-white shadow-xl rounded-3xl w-80 p-4">
+            <div className="card--4 flex items-center bg-white shadow-xl rounded-3xl w-80 p-4" ref={cardRef4} style={cardStyle}>
                 <div className="w-20 h-20">
                     <img src="https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200" alt="John Doe" className="rounded-2xl object-cover w-full h-full" />
                 </div>
