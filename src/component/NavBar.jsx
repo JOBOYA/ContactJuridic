@@ -37,7 +37,7 @@ function NavBar() {
         <div className="flex justify-between items-center py-4">
           {/* import svg */}
          
-          <img  src={logo} alt="logo" width="20%"  />
+          <img  src={logo} alt="logo" width="250vw"  />
 
 
           

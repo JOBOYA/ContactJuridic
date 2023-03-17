@@ -1,8 +1,8 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="100 20 500 100">
   <!-- Text using the #pattern in defs as the fill -->
- <text x="50%" text-anchor="middle" y="50%" dy="0.4em" fill="url(#pattern)" font-weight="bold" font-family="sonos-logoregular" font-size="6.5em">MMFJ</text>
-  <text x="50%" text-anchor="middle" y="85%" dy="1.5em" fill="#333" font-size="1.3em" font-weight="bold">Ma Meilleure Forme Juridique</text>
+ <text x="50%" text-anchor="middle" y="50%" dy="0.4em" fill="url(#pattern)" font-weight="bold" font-family="sonos-logoregular" font-size="6em">MMFJ</text>
+  <text x="50%" text-anchor="middle" y="85%" dy="1.5em" fill="#333" font-size="1.4em" font-weight="bold">Ma Meilleure Forme Juridique</text>
 
 
   <defs>  
