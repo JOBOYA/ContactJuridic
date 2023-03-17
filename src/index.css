@@ -120,6 +120,9 @@ h2{
 }
 
 
+
+
+
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-100%);
@@ -415,6 +418,9 @@ button:active {
   }
 }
 
+
+
+
 /*******Modal************/
 
 .modal {
@@ -429,6 +435,7 @@ button:active {
   align-items: center;
   z-index: 100;
 }
+
 
 /**********Neumorphism*****************/
 

@@ -32,7 +32,8 @@ function NavBar() {
 <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* import svg */}
-          <img src={logo} alt="logo" width="150" height="100" />
+          <img  src={logo} alt="logo" width="20%" height="100" />
+
 
 
           

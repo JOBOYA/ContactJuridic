@@ -2,6 +2,8 @@
   
   <!-- Text using the #pattern in defs as the fill -->
   <text x="50%" text-anchor="middle" y="50%" dy="0.4em" fill="url(#pattern)" font-family="sonos-logoregular" font-size="50vh">MMFJ</text>
+<text x="50%" text-anchor="middle" y="70%" dy="1.5em" fill="#333" font-size="10vh" font-weight="bold">Ma Meilleure Forme Juridique</text>
+
   
   <defs>  
     <!-- Da gradient -->
