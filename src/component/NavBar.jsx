@@ -21,6 +21,9 @@ function NavBar() {
   }, []);
 
   return (
+    
+      
+      
     <nav
     className={`fixed w-full z-10 transition-all duration-300 py-4 backdrop-filter ${
       isScrolled
@@ -29,11 +32,12 @@ function NavBar() {
     }`}
   >
   
-<div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
+     
         <div className="flex justify-between items-center py-4">
           {/* import svg */}
-          <img  src={logo} alt="logo" width="20%" height="100" />
-
+         
+          <img  src={logo} alt="logo" width="20%"  />
 
 
           
@@ -68,7 +72,8 @@ function NavBar() {
       </div>
 
           
-    </nav>
+      </nav>
+
   );
 }
 
