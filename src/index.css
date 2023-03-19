@@ -4,7 +4,6 @@
 
 html {
   background-color: #eeeeeef1;
-
   overflow-y: auto;
  
 }
@@ -89,7 +88,7 @@ h2{
 .header {
   width: 100vw;
   max-width: 100%;
- margin: 90px auto;
+ margin: 150px auto;
   display: flex;
   align-items: center;
   padding: 20px;

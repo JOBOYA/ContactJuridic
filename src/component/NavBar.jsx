@@ -26,12 +26,12 @@ function NavBar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-       <img src={logo} alt="logo" className="w-56" />
+       <img src={logo} alt="logo" className="w-60 py-5" />
             
           <span>Des questions?</span>
 
           <div className="hidden md:flex space-x-4">
-            <a href="#accueil" className="relative inline-block px-3 py-2 text-sm font-medium">
+            <a href="#accueil" className="relative inline-block px-3 py-2 text-sm font-medium ">
               ACCUEIL
               <div className="relative">
                 <div className="line absolute bottom-0 left-0 w-full h-0.5 bg-black transform scale-x-0 transition-transform duration-200"></div>
