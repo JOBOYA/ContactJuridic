@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/MMFJ.svg';
+import logo from '../assets/SCE.svg';
 
 function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +26,7 @@ function NavBar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-       <img src={logo} alt="logo" className="w-60 py-5" />
+       <img src={logo} alt="logo" id='logo' className="w-80 py-4" />
             
           <span>Des questions?</span>
 

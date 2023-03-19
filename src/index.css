@@ -526,3 +526,10 @@ button:active {
   grid-column: 1/1;
   }
   }
+
+  @media screen and (max-width: 768px) {
+    #logo {
+      width: 60%;
+    }
+    
+  }
