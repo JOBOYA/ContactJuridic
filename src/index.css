@@ -48,6 +48,8 @@ h2{
 
 }
 
+
+
 /************Nav****/
 
 .relative:hover .line {
@@ -119,8 +121,12 @@ h2{
   animation-delay: 0.3s; /* Ajoutez cette ligne */
 }
 
-
-
+#img1 {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 
 @keyframes slideFromLeft {
@@ -417,6 +423,7 @@ button:active {
     width: 80%;
   }
 }
+
 
 
 
